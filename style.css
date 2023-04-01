@@ -83,7 +83,7 @@ h3{
     font-weight: 600;
 }
 
-#container{
+.container{
     width: 1000px;
     height: auto;
     margin: auto;
@@ -145,4 +145,32 @@ span{
     line-height: 1.8;
     margin-top: 30px;
     font-weight: 100;
+}
+
+#egitimler{
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    height: 700px;
+}
+
+.card{
+    width: 300px;
+    height: 390px;
+    border: 1px solid #ddd;
+    padding: 0;
+    display: inline-block;
+}
+
+.card:hover{
+    border: 3px solid gray;
+}
+
+.cardtitle{
+    font-size: 15px;
+    color: #3A98B9;
+}
+
+.cardp{
+    color: #888;
 }
