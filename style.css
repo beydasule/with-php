@@ -174,3 +174,57 @@ span{
 .cardp{
     color: #888;
 }
+
+#ekip{
+    background-color: #3A98B9;
+    padding: 50px;
+    height: 850px;
+    text-align: center;
+}
+
+#teamh3{
+    color: white;
+}
+
+.column-left-right{
+    width: 320px;
+    float: left;
+    padding: 45px;
+}
+
+.oval{
+    border-radius: 50%;
+}
+
+.team-name{
+    color: white;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.team{
+    color: #ddd;
+    font-size: 18px;
+}
+
+.social{
+    color: #ddd;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 50px;
+    border-radius: 10px;
+    margin: 5px 10px;
+}
+
+.social:hover{
+    background-color: #ddd;
+    color: #227fa1;
+    border: 1px solid #3A98B9;
+} 
+
+.column{
+    width: 320px;
+    float: left;
+    padding: 10px;
+}
+
