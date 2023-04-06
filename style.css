@@ -178,7 +178,7 @@ span{
 #ekip{
     background-color: #3A98B9;
     padding: 50px;
-    height: 850px;
+    height: 870px;
     text-align: center;
 }
 
@@ -226,5 +226,108 @@ span{
     width: 320px;
     float: left;
     padding: 10px;
+}
+
+#iletisim{
+    background: url(img/contact.jpg);
+    background-size: cover;
+    padding: 50px;
+    height: auto;
+    text-align: center;
+}
+
+#h3contact{
+    color: #fff;
+}
+
+#contact-opaque{
+    background: rgba(255,255,255,0.2);
+    padding: 30px 20px;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    height: 550px;
+}
+
+#form-group{
+    width: 700px;
+    float: left;
+    height: 500px;
+    text-align: left;
+}
+
+#left-form{
+    width: 50%;
+    float: left;
+    padding-right: 5px;
+}
+
+#right-form{
+    width: 50%;
+    float: right;
+    padding-left: 5px;
+}
+
+.form-conrtol{
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #495057;
+    background-color: white;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #ced4da;
+}
+
+textarea{
+    font-family: Arial;
+}
+
+input[type="submit"]{
+    cursor: pointer;
+    background-color: #227fa1;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 10px 30px;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+#address{
+    width: 240px;
+    float: right;
+    padding: 30px;
+    height: 500px;
+    text-align: left;
+}
+
+#address-title{
+    font-size: 30px;
+    color: white;
+}
+
+.addressp{
+    color: #ddd;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+#copy-right{
+    color: white;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#up{
+    color: white;
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 9px 12px;
+    margin-top: 20px;
 }
 
