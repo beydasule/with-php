@@ -131,30 +131,31 @@
     <section id="iletisim">
         <div class="container">
             <h3 id="h3contact">İletişim</h3>
-
-            <div id="contact-opaque">
-                <div id="form-group">
-                    <div id="left-form">
-                        <input type="text" name="mail" placeholder="Ad Soyad" required class="form-conrtol">
-                        <input type="text" name="tel" placeholder="Telefon Numarası" required class="form-conrtol">
+            <form action="index.php" method="post">
+                <div id="contact-opaque">
+                    <div id="form-group">
+                        <div id="left-form">
+                            <input type="text" name="name" placeholder="Ad Soyad" required class="form-conrtol">
+                            <input type="text" name="tel" placeholder="Telefon Numarası" required class="form-conrtol">
+                        </div>
+                        <div id="right-form">
+                            <input type="email" name="mail" placeholder="Email Adresiniz" required class="form-conrtol">
+                            <input type="text" name="topic" placeholder="Konu Başlığı" required class="form-conrtol">
+                        </div>
+                        <textarea name="message" id="" cols="30" placeholder="Mesaj Giriniz" rows="10" required class="form-conrtol"></textarea>
+                        <input type="submit" value="Gönder">
                     </div>
-                    <div id="right-form">
-                        <input type="email" name="name" placeholder="Email Adresiniz" required class="form-conrtol">
-                        <input type="text" name="topic" placeholder="Konu Başlığı" required class="form-conrtol">  
-                    </div>
-                    <textarea name="message" id="" cols="30" placeholder="Mesaj Giriniz" rows="10" required class="form-conrtol"></textarea>                   
-                    <input type="submit" value="Gönder">
-                </div>
-                <div id="address">
-                    <h4 id="address-title">Adres: </h4>
-                    <p class="addressp">Lorem ipsum, dolor </p>
-                    <p class="addressp">Lorem ipsum, </p>
-                    <p class="addressp">Lorem ipsum, dolor </p>
-                    <p class="addressp">555 555 55 55 </p>
-                    <p class="addressp">Email: deneme@deneme.com</p>
+                    <div id="address">
+                        <h4 id="address-title">Adres: </h4>
+                        <p class="addressp">Lorem ipsum, dolor </p>
+                        <p class="addressp">Lorem ipsum, </p>
+                        <p class="addressp">Lorem ipsum, dolor </p>
+                        <p class="addressp">555 555 55 55 </p>
+                        <p class="addressp">Email: deneme@deneme.com</p>
 
+                    </div>
                 </div>
-            </div>
+            </form>
             <footer>
                 <div id="copy-right">2020 | Tüm Hakları Saklıdır</div>
                 <div id="social-footer">
@@ -177,6 +178,24 @@
 
 <?php
 
-    include("connect.php");
+include("connect.php");
+
+if(isset($_POST["name"],$_POST["tel"],$_POST["mail"],$_POST["topic"],$_POST["message"]))
+{
+    $name_surname = $_POST["name"];
+    $tel = $_POST["tel"];
+    $email = $_POST["mail"];
+    $topic = $_POST["topic"];
+    $message = $_POST["message"];
+
+    $add = "INSERT INTO iletisim(ad_soyad, tel, email, konu, mesaj) VALUES ('".$name_surname."','".$tel."','".$email."','".$topic."','".$message."')";
+    if($connect->query($add)===true)
+    {
+        echo "<script>alert('Mesajınız Gönderilmiştir.')</script>";
+    }
+    else{
+        echo "<script>alert('Mesajınız Gönderilirken Hata Oluştu.')</script>";
+    }
+}
 
 ?>
