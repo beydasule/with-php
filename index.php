@@ -24,14 +24,14 @@
     <section id="menu">
         <div id="logo">Logo</div>
         <nav>
-            <a href=""><i class="fas fa-home icon"></i>Anasayfa</a>
-            <a href=""><i class="fas fa-info icon"></i>Hakkımızda</a>
-            <a href=""><i class="fas fa-graduation-cap icon"></i>Eğitimler</a>
-            <a href=""><i class="fas fa-user-friends icon"></i>Ekip</a>
-            <a href=""><i class="fas fa-map-pin icon"></i>İletişim</a>
+            <a href="#anasayfa"><i class="fas fa-home icon"></i>Anasayfa</a>
+            <a href="#hakkimizda"><i class="fas fa-info icon"></i>Hakkımızda</a>
+            <a href="#egitimler"><i class="fas fa-graduation-cap icon"></i>Eğitimler</a>
+            <a href="#ekip"><i class="fas fa-user-friends icon"></i>Ekip</a>
+            <a href="#iletisim"><i class="fas fa-map-pin icon"></i>İletişim</a>
         </nav>
     </section>
-
+    
     <section id="anasayfa">
         <div id="black">
 
