@@ -1,70 +1,97 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Add icon library -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-* {box-sizing: border-box;}
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Add icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-.input-container {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  width: 100%;
-  margin-bottom: 15px;
-}
+    * {
+      box-sizing: border-box;
+    }
 
-.icon {
-  padding: 10px;
-  background: dodgerblue;
-  color: white;
-  min-width: 50px;
-  text-align: center;
-}
+    .input-container {
+      display: -ms-flexbox;
+      /* IE10 */
+      display: flex;
+      width: 100%;
+      margin-bottom: 15px;
+    }
 
-.input-field {
-  width: 100%;
-  padding: 10px;
-  outline: none;
-}
+    .icon {
+      padding: 10px;
+      background: dodgerblue;
+      color: white;
+      min-width: 50px;
+      text-align: center;
+    }
 
-.input-field:focus {
-  border: 2px solid dodgerblue;
-}
+    .input-field {
+      width: 100%;
+      padding: 10px;
+      outline: none;
+    }
 
-/* Set a style for the submit button */
-.btn {
-  background-color: dodgerblue;
-  color: white;
-  padding: 15px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
+    .input-field:focus {
+      border: 2px solid dodgerblue;
+    }
 
-.btn:hover {
-  opacity: 1;
-}
-</style>
+    /* Set a style for the submit button */
+    .btn {
+      background-color: dodgerblue;
+      color: white;
+      padding: 15px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.9;
+    }
+
+    .btn:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
+
 <body>
 
-<form action="/panel-input.html" method="post" style="max-width:500px;margin:auto">
-  <h2>Panel Giriş</h2>
-  <div class="input-container">
-    <i class="fa fa-user icon"></i>
-    <input class="input-field" type="text" placeholder="Kullanıcı Adı" name="username">
-  </div>
+  <form action="/panel-input.php" method="post" style="max-width:500px;margin:auto">
+    <h2>Panel Giriş</h2>
+    <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" placeholder="Kullanıcı Adı" name="username">
+    </div>
+
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="password" placeholder="Şifre" name="password">
+    </div>
+
+    <button type="submit" class="btn">Giriş Yap</button>
+  </form>
+
   
-  <div class="input-container">
-    <i class="fa fa-key icon"></i>
-    <input class="input-field" type="password" placeholder="Şifre" name="password">
-  </div>
-
-  <button type="submit" class="btn">Giriş Yap</button>
-</form>
-
 </body>
+
 </html>
+
+<?php
+
+session_start();
+if (isset($_POST["username"], $_POST["password"])) 
+{
+
+  if ($_POST["username"] == "admin" && $_POST["password"] == "12345") 
+  {
+    $_SESSION["user"] = $_POST["username"];
+    header("panel.php");
+  } else 
+  {
+    echo "<script>alert('Kullanıcı adı veya şifre yanlış.')</script>";
+  }
+}
+?>
